@@ -55,3 +55,15 @@ echo INSTALL Go1.9
 wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
 tar -C /usr/local -xzf go1.9.linux-amd64.tar.gz
 echo "PATH=\"\$PATH:/usr/local/go/bin\"" >> ~/.profile
+
+
+## Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+apt-cache policy docker-ce
+apt-get install docker-ce
+
+## Add user to docker group
+sudo usermod -aG docker ${USER}
+id -nG
