@@ -37,6 +37,12 @@ npm install -g yarn
 echo INSTALL Typescript...
 npm install -g typescript
 
+# http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
+# Uncomment for TLP support 
+# apt install tlp tlp-rdw 
+# apt-get install tp-smapi-dkms acpi-call-dkms 
+
+
 
 ## GitKraken
 echo INSTALL GitKraken...
